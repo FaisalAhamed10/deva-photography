@@ -705,3 +705,7 @@ noscript .noscript-note { position: fixed; bottom: 0; left: 0; right: 0; z-index
 @media (max-width: 767px) { .footer__bottom { padding-bottom: 96px; } }
 .footer__credit { color: rgba(255,255,255,.85); background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size .4s var(--ease), color .3s; }
 .footer__credit:hover { color: var(--c-white); background-size: 100% 1px; }
+
+/* Netlify's free plan pins a "Powered by Netlify" badge to the bottom-right corner;
+   lift the back-to-top button above it so they never overlap. */
+.to-top { bottom: calc(clamp(16px, 2.4vw, 32px) + 60px); }
