@@ -709,3 +709,5 @@ noscript .noscript-note { position: fixed; bottom: 0; left: 0; right: 0; z-index
 /* Netlify's free plan pins a "Powered by Netlify" badge to the bottom-right corner;
    lift the back-to-top button above it so they never overlap. */
 .to-top { bottom: calc(clamp(16px, 2.4vw, 32px) + 60px); }
+/* Leave room under the footer links for the fixed Netlify badge. */
+.footer__bottom { padding-bottom: 84px; }
