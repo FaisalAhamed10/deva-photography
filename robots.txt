@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /uploads/
+Disallow: /source-images/
+Disallow: /scripts/
+
+# The domain below is filled in automatically by scripts/build.mjs
+Sitemap: https://YOUR-DOMAIN.com/sitemap.xml

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/logo/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <title>Page not found | DEVA Photography</title>
+  <meta name="robots" content="noindex">
+  <script>
+    /* Runs before paint: decide whether to show the intro, and never leave the page hidden. */
+    (function (d) {
+      var h = d.documentElement; h.classList.add('js');
+      var seen = false; try { seen = !!sessionStorage.getItem('deva-intro-seen'); } catch (e) {}
+      if (false && !seen) h.classList.add('show-preloader');
+      setTimeout(function () { if (!h.classList.contains('no-curtain')) { h.classList.remove('show-preloader'); h.classList.add('no-curtain'); } }, 7000);
+    })(document);
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-curtain" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <header class="site-header" data-solid>
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html#home" aria-label="DEVA Photography — home">
+        <img src="assets/logo/logo-white.svg" alt="DEVA Photography" width="210" height="97">
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a class="nav-link" href="index.html#home" data-section="home">Home</a></li>
+          <li><a class="nav-link" href="index.html#about" data-section="about">About</a></li>
+          <li><a class="nav-link" href="index.html#gallery" data-section="gallery">Gallery</a></li>
+          <li><a class="nav-link" href="index.html#contact" data-section="contact">Contact</a></li>
+        </ul>
+        <button type="button" class="btn btn--sm" data-book data-magnetic="0.2">Book your date</button>
+      </nav>
+      <button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="menu-toggle__lines" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-label="Menu">
+    <nav class="mobile-menu__list" aria-label="Mobile">
+      <a class="mobile-menu__link" href="index.html#home"><span><small>01</small> Home</span></a>
+      <a class="mobile-menu__link" href="index.html#about"><span><small>02</small> About</span></a>
+      <a class="mobile-menu__link" href="index.html#gallery"><span><small>03</small> Gallery</span></a>
+      <a class="mobile-menu__link" href="index.html#contact"><span><small>04</small> Contact</span></a>
+    </nav>
+    <div class="mobile-menu__foot">
+      <button type="button" class="btn btn--solid btn--block" data-book>Book your date <i data-lucide="arrow-right"></i></button>
+      <div class="mobile-menu__contact">
+        <a href="tel:+919943677235"><i data-lucide="phone"></i> +91 99436 77235</a>
+        <a href="https://www.instagram.com/deva__photograph_y/" target="_blank" rel="noopener"><i data-lucide="instagram"></i> Instagram</a>
+      </div>
+    </div>
+  </div>
+  <main id="main" tabindex="-1" class="notfound">
+    <div>
+      <span class="eyebrow">Out of frame</span>
+      <h1 data-split>404</h1>
+      <p class="lede" style="margin:24px auto 36px;max-width:440px">The page you're looking for doesn't exist or has moved.</p>
+      <a class="btn btn--solid" href="index.html">Back to home <i data-lucide="arrow-right"></i></a>
+    </div>
+  </main>
+  <footer class="site-footer" aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="visually-hidden">Site footer</h2>
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/logo/logo-white.svg" alt="DEVA Photography" width="160" height="74" loading="lazy">
+          <p class="footer__about">Preserving beautiful moments through creative photography. From weddings and fashion to portraits and baby shoots, every frame tells a story.</p>
+          <div class="socials">
+            <a class="social" href="https://www.instagram.com/deva__photograph_y/" target="_blank" rel="noopener" aria-label="DEVA Photography on Instagram"><i data-lucide="instagram"></i></a>
+            <a class="social" href="#" data-whatsapp target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i data-lucide="message-circle"></i></a>
+            <!-- EDIT: add Facebook / YouTube only once official profiles exist, e.g.
+            <a class="social" href="https://facebook.com/..." target="_blank" rel="noopener" aria-label="Facebook"><i data-lucide="facebook"></i></a> -->
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__title">Latest photos</h3>
+          <div class="latest" data-latest aria-label="Nine newest photos from the gallery"></div>
+        </div>
+        <div>
+          <h3 class="footer__title">Get in touch</h3>
+          <div class="footer__contact">
+            <a href="mailto:devaphotography@gmail.com"><i data-lucide="mail"></i><span><small>Email</small>devaphotography@gmail.com</span></a>
+            <a href="tel:+919943677235"><i data-lucide="phone"></i><span><small>Phone</small>+91 99436 77235</span></a>
+            <a href="#" data-whatsapp target="_blank" rel="noopener"><i data-lucide="message-circle"></i><span><small>WhatsApp</small>Chat with us</span></a>
+          </div>
+        </div>
+      </div>
+      <p class="footer__wordmark" aria-hidden="true">Deva</p>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; <span data-year>2026</span> <a class="footer__credit" href="https://devephotography.in/" target="_blank" rel="noopener">Deva Photography</a>. All Rights Reserved. Made with <span role="img" aria-label="love">💙</span> by <a class="footer__credit" href="https://luphera-technologies.pages.dev/" target="_blank" rel="noopener">Luphera</a></p>
+      <nav class="footer__legal" aria-label="Legal">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </nav>
+    </div>
+  </footer>
+
+  <button type="button" class="to-top" aria-label="Back to top">
+    <svg class="ring" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="27"/></svg>
+    <i data-lucide="arrow-up"></i>
+  </button>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="assets/data/gallery.js" defer></script>
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/utils.js" defer></script>
+  <script src="assets/js/icons.js" defer></script>
+  <script src="assets/js/preloader.js" defer></script>
+  <script src="assets/js/nav.js" defer></script>
+  <script src="assets/js/gallery.js" defer></script>
+  <script src="assets/js/lightbox.js" defer></script>
+  <script src="assets/js/forms.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

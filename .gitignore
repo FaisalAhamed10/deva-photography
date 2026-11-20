@@ -1,0 +1,32 @@
+# Dependencies & build output
+node_modules/
+dist/
+.netlify/
+.cache/
+
+# Environment / secrets (never commit)
+.env
+.env.*
+!.env.example
+
+# Photo pipeline working folders
+uploads/_done/
+uploads/**/*.jpg
+uploads/**/*.jpeg
+uploads/**/*.png
+uploads/**/*.heic
+uploads/**/*.tif
+uploads/**/*.tiff
+uploads/**/*.webp
+# Original Instagram downloads (processed versions live in assets/images/gallery)
+source-images/
+
+# Logs & OS / editor files
+npm-debug.log*
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+.claude/

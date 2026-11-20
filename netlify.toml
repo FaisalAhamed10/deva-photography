@@ -1,0 +1,50 @@
+# Netlify configuration — DEVA Photography
+# Static multi-page site (plain HTML/CSS/JS + GSAP via CDN). No framework, no SPA routing.
+
+[build]
+  command = "npm run build"   # copies public files to dist/, sets the site URL, verifies assets
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  # Optional: set SITE_URL in Netlify (Site configuration → Environment variables) once a
+  # custom domain is live, e.g. https://devephotography.in. Without it, Netlify's own URL is used.
+
+# Unknown paths show the custom 404 page (Netlify serves /404.html automatically).
+# No SPA catch-all redirect: every page is a real HTML file.
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; manifest-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+
+# Photos, logos and icons rarely change — cache for a week.
+[[headers]]
+  for = "/assets/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/assets/logo/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# CSS/JS/data are not fingerprinted — revalidate so updates appear immediately.
+[[headers]]
+  for = "/assets/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
